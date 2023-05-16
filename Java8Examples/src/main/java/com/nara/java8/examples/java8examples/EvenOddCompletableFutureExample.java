@@ -12,11 +12,11 @@ public class EvenOddCompletableFutureExample {
     public static void execute(int number) throws InterruptedException {
         //synchronoze object first
 
-        Synchronized (object) {
-            System.out.println(Thread.currentThread().getName()+" : "+number);
-            object.notify();
-            object.wait();
-        }
+//        Synchronized (object) {
+//            System.out.println(Thread.currentThread().getName()+" : "+number);
+//            object.notify();
+//            object.wait();
+//        }
     }
 
     //create two static methods
@@ -41,7 +41,7 @@ public class EvenOddCompletableFutureExample {
     }
     public static void printNumber(IntPredicate condition)throws InterruptedException{
         try{
-            IntStream.rangeClosed(1,10).filter(condition).forEach(EvenOddCompletableFutureExample::execute);
+            //IntStream.rangeClosed(1,10).filter(condition).forEach(EvenOddCompletableFutureExample::execute);
         }catch(Exception ex){
             ex.printStackTrace();
         }
